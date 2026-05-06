@@ -110,8 +110,18 @@ nav .container {
 .lang-switch a {
     padding: 6px 12px;
     border-radius: 6px;
-    font-size: 1rem;
+    font-size: 0.85rem;
+    font-weight: 500;
     line-height: 1;
+    white-space: nowrap;
+    color: var(--text-secondary);
+    -webkit-transition: background 0.2s, color 0.2s;
+    transition: background 0.2s, color 0.2s;
+}
+
+.lang-switch a:hover {
+    background: var(--surface-light);
+    color: var(--text-primary);
 }
 
 .lang-switch a.active {
@@ -125,6 +135,26 @@ nav .container {
     text-align: center;
 }
 
+.hero-title-row {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 16px;
+}
+
+.hero-app-icon {
+    width: 130px;
+    height: 130px;
+    border-radius: 28px;
+    object-fit: cover;
+    flex-shrink: 0;
+    box-shadow: 0 8px 30px rgba(59, 130, 246, 0.3);
+}
+
 .hero-banner {
     width: 100%;
     max-width: 900px;
@@ -136,7 +166,7 @@ nav .container {
 .hero h1 {
     font-size: 3.5rem;
     font-weight: 700;
-    margin-bottom: 16px;
+    margin-bottom: 0;
     background: -webkit-linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
@@ -559,6 +589,18 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .hero-title-row {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .hero-app-icon {
+        width: 100px;
+        height: 100px;
+        border-radius: 22px;
+    }
+
     .hero h1 {
         font-size: 2rem;
     }
