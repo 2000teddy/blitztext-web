@@ -35,6 +35,7 @@ body {
 /* Navigation */
 nav {
     background: rgba(15, 23, 42, 0.95);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     position: fixed;
     top: 0;
@@ -45,14 +46,19 @@ nav {
 }
 
 nav .container {
+    display: -webkit-flex;
     display: flex;
+    -webkit-justify-content: space-between;
     justify-content: space-between;
+    -webkit-align-items: center;
     align-items: center;
     padding: 16px 20px;
 }
 
 .logo {
+    display: -webkit-flex;
     display: flex;
+    -webkit-align-items: center;
     align-items: center;
     gap: 12px;
     text-decoration: none;
@@ -61,19 +67,29 @@ nav .container {
     font-size: 1.2rem;
 }
 
+.logo-app-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 7px;
+    object-fit: cover;
+}
+
 .logo-icon {
     font-size: 1.5rem;
 }
 
 .nav-links {
+    display: -webkit-flex;
     display: flex;
     gap: 24px;
+    -webkit-align-items: center;
     align-items: center;
 }
 
 .nav-links a {
     color: var(--text-secondary);
     text-decoration: none;
+    -webkit-transition: color 0.2s;
     transition: color 0.2s;
     font-size: 0.95rem;
 }
@@ -83,6 +99,7 @@ nav .container {
 }
 
 .lang-switch {
+    display: -webkit-flex;
     display: flex;
     gap: 8px;
     padding: 4px;
@@ -93,7 +110,8 @@ nav .container {
 .lang-switch a {
     padding: 6px 12px;
     border-radius: 6px;
-    font-size: 0.85rem;
+    font-size: 1rem;
+    line-height: 1;
 }
 
 .lang-switch a.active {
@@ -119,6 +137,7 @@ nav .container {
     font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 16px;
+    background: -webkit-linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -132,25 +151,41 @@ nav .container {
     margin: 0 auto 32px;
 }
 
-.download-buttons {
+.hero-buttons {
+    display: -webkit-flex;
     display: flex;
+    -webkit-justify-content: center;
     justify-content: center;
     gap: 16px;
+    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-align-items: center;
     align-items: center;
 }
 
 .app-store-badge {
     height: 54px;
+    -webkit-transition: -webkit-transform 0.2s;
     transition: transform 0.2s;
 }
 
-.app-store-badge:hover {
+.btn-appstore {
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    -webkit-align-items: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.btn-appstore:hover .app-store-badge {
+    -webkit-transform: scale(1.05);
     transform: scale(1.05);
 }
 
 .btn-pro {
+    display: -webkit-inline-flex;
     display: inline-flex;
+    -webkit-align-items: center;
     align-items: center;
     gap: 8px;
     padding: 14px 28px;
@@ -161,10 +196,12 @@ nav .container {
     border: 1px solid var(--surface-light);
     font-size: 1rem;
     font-weight: 500;
+    -webkit-transition: -webkit-transform 0.2s, background 0.2s;
     transition: transform 0.2s, background 0.2s;
 }
 
 .btn-pro:hover {
+    -webkit-transform: scale(1.05);
     transform: scale(1.05);
     background: var(--surface-light);
 }
@@ -181,6 +218,7 @@ nav .container {
 }
 
 .features-grid {
+    display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 24px;
@@ -191,10 +229,12 @@ nav .container {
     border-radius: 16px;
     padding: 32px;
     border: 1px solid var(--surface-light);
+    -webkit-transition: -webkit-transform 0.2s, box-shadow 0.2s;
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .feature-card:hover {
+    -webkit-transform: translateY(-4px);
     transform: translateY(-4px);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
 }
@@ -220,7 +260,27 @@ nav .container {
     background: var(--surface);
 }
 
+.backends-list {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.backend-item {
+    background: var(--background);
+    border-radius: 12px;
+    padding: 16px 24px;
+    border: 1px solid var(--surface-light);
+    font-size: 1rem;
+}
+
 .backends-grid {
+    display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 24px;
@@ -260,6 +320,40 @@ nav .container {
 /* Comparison Section */
 .comparison {
     padding: 80px 0;
+}
+
+.comparison table,
+table {
+    max-width: 700px;
+    margin: 32px auto 0;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.comparison th,
+.comparison td {
+    padding: 14px 20px;
+    text-align: left;
+    border-bottom: 1px solid var(--surface-light);
+    font-size: 0.95rem;
+}
+
+.comparison th {
+    color: var(--text-secondary);
+    font-weight: 400;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.comparison td:nth-child(2),
+.comparison td:nth-child(3) {
+    text-align: center;
+}
+
+.comparison th:nth-child(2),
+.comparison th:nth-child(3) {
+    text-align: center;
 }
 
 .comparison-table {
@@ -305,14 +399,19 @@ footer {
 }
 
 .footer-content {
+    display: -webkit-flex;
     display: flex;
+    -webkit-justify-content: space-between;
     justify-content: space-between;
+    -webkit-align-items: center;
     align-items: center;
+    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
     gap: 24px;
 }
 
 .footer-links {
+    display: -webkit-flex;
     display: flex;
     gap: 24px;
 }
@@ -321,6 +420,7 @@ footer {
     color: var(--text-secondary);
     text-decoration: none;
     font-size: 0.9rem;
+    -webkit-transition: color 0.2s;
     transition: color 0.2s;
 }
 
@@ -384,6 +484,16 @@ footer {
 
 .policy-page strong {
     color: var(--text-primary);
+}
+
+.policy-page blockquote {
+    background: var(--surface);
+    border-left: 3px solid var(--secondary-color);
+    border-radius: 0 12px 12px 0;
+    padding: 16px 20px;
+    margin: 24px 0;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
 }
 
 .policy-page table {
@@ -458,27 +568,35 @@ footer {
     }
 
     nav .container {
+        -webkit-flex-direction: column;
         flex-direction: column;
         gap: 16px;
     }
 
     .nav-links {
+        -webkit-flex-wrap: wrap;
         flex-wrap: wrap;
+        -webkit-justify-content: center;
         justify-content: center;
     }
 
     .footer-content {
+        -webkit-flex-direction: column;
         flex-direction: column;
         text-align: center;
     }
 
     .footer-links {
+        -webkit-flex-wrap: wrap;
         flex-wrap: wrap;
+        -webkit-justify-content: center;
         justify-content: center;
     }
 
-    .download-buttons {
+    .hero-buttons {
+        -webkit-flex-direction: column;
         flex-direction: column;
+        -webkit-align-items: center;
         align-items: center;
     }
 

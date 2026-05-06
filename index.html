@@ -1,31 +1,32 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Blitztext — Spracheingabe per Hotkey für macOS</title>
-    <meta name="description" content="Blitztext ist eine Menüleisten-App für macOS. Hotkey halten, sprechen, loslassen — der transkribierte Text landet direkt im aktiven Fenster." />
-    <meta property="og:title" content="Blitztext — Spracheingabe per Hotkey für macOS" />
-    <meta property="og:description" content="Hotkey halten, sprechen, loslassen. Text landet direkt im aktiven Fenster." />
+    <title>Blitztext — Voice Input via Hotkey for macOS</title>
+    <meta name="description" content="Blitztext is a menu bar app for macOS. Hold a hotkey, speak, release — your transcribed text appears instantly." />
+    <meta property="og:title" content="Blitztext — Voice Input via Hotkey for macOS" />
+    <meta property="og:description" content="Hold a hotkey, speak, release. Your text appears instantly." />
     <meta property="og:type" content="website" />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="alternate" hreflang="en" href="en/" />
-    <link rel="alternate" hreflang="de" href="./" />
+    <link rel="alternate" hreflang="en" href="./" />
+    <link rel="alternate" hreflang="de" href="de/" />
 </head>
 <body>
     <nav>
         <div class="container">
             <a href="./" class="logo">
-                <span class="logo-icon">⚡</span>
+                <img src="blitztext-icon-1024.png" alt="Blitztext Icon" class="logo-app-icon" />
+                <span class="logo-icon">&#x26A1;</span>
                 Blitztext
             </a>
             <div class="nav-links">
-                <a href="#features">Funktionen</a>
-                <a href="privacy.html">Datenschutz</a>
-                <a href="impressum.html">Impressum</a>
+                <a href="#features">Features</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="impressum.html">Legal</a>
                 <div class="lang-switch">
-                    <a href="en/">EN</a>
-                    <a href="./" class="active">DE</a>
+                    <a href="./" class="active">&#x1F1EC;&#x1F1E7;</a>
+                    <a href="de/">&#x1F1E9;&#x1F1EA;</a>
                 </div>
             </div>
         </div>
@@ -35,46 +36,49 @@
         <section class="hero">
             <div class="container">
                 <h1>Blitztext</h1>
-                <p class="subtitle">Hotkey halten, sprechen, loslassen — dein Text ist da.</p>
+                <p class="subtitle">Hold the hotkey, speak, release — your text is there.</p>
                 <div class="hero-buttons">
-                    <a href="https://github.com/2000teddy/blitztext/releases" target="_blank" class="btn-pro">⬇ Pro-Version (DMG)</a>
+                    <a href="https://github.com/2000teddy/blitztext/releases" target="_blank" class="btn-pro">&#x2B07; Pro Version (DMG)</a>
+                    <a href="#" class="btn-appstore">
+                        <img src="download-on-the-app-store.svg" alt="Download on the App Store" class="app-store-badge" />
+                    </a>
                 </div>
             </div>
         </section>
 
         <section class="features" id="features">
             <div class="container">
-                <h2 class="section-title">Was Blitztext kann</h2>
+                <h2 class="section-title">What Blitztext Does</h2>
                 <div class="features-grid">
                     <div class="feature-card">
-                        <div class="feature-icon">🎤</div>
-                        <h3>Sprache-zu-Text</h3>
-                        <p>Hotkey drücken, sprechen, loslassen. Der transkribierte Text wird sofort eingefügt oder in die Zwischenablage gelegt.</p>
+                        <div class="feature-icon">&#x1F3A4;</div>
+                        <h3>Speech-to-Text</h3>
+                        <p>Press the hotkey, speak, release. The transcribed text is pasted instantly or placed on your clipboard.</p>
                     </div>
                     <div class="feature-card">
-                        <div class="feature-icon">⚡</div>
-                        <h3>Blitzschnell</h3>
-                        <p>Transkription in unter einer Sekunde. Lokal auf Apple Silicon oder über OpenAI Cloud — du wählst.</p>
+                        <div class="feature-icon">&#x26A1;</div>
+                        <h3>Lightning Fast</h3>
+                        <p>Transcription in under a second. Local on Apple Silicon or via OpenAI Cloud — your choice.</p>
                     </div>
                     <div class="feature-card">
-                        <div class="feature-icon">🔒</div>
-                        <h3>Privatsphäre</h3>
-                        <p>Bei lokalem Backend verlässt kein einziges Byte deinen Mac. API-Keys verschlüsselt im Schlüsselbund.</p>
+                        <div class="feature-icon">&#x1F512;</div>
+                        <h3>Privacy</h3>
+                        <p>With local backend, not a single byte leaves your Mac. API keys encrypted in the Keychain.</p>
                     </div>
                     <div class="feature-card">
-                        <div class="feature-icon">🎭</div>
-                        <h3>Intelligente Modi</h3>
-                        <p>Normal, Rage (höflich umschreiben), Emoji (anreichern), Yoda — per Hotkey oder Klick.</p>
+                        <div class="feature-icon">&#x1F3AD;</div>
+                        <h3>Smart Modes</h3>
+                        <p>Normal, Rage (rewrite politely), Emoji (enrich), Yoda, Translator — instant translation into 10 target languages — via hotkey or click.</p>
                     </div>
                     <div class="feature-card">
-                        <div class="feature-icon">⌨️</div>
-                        <h3>Konfigurierbare Hotkeys</h3>
-                        <p>Eigene Tastenkombinationen für jeden Modus. Press-and-Hold: halten = aufnehmen, loslassen = transkribieren.</p>
+                        <div class="feature-icon">&#x2328;&#xFE0F;</div>
+                        <h3>Configurable Hotkeys</h3>
+                        <p>Custom keyboard shortcuts for each mode. Press-and-hold: hold = record, release = transcribe.</p>
                     </div>
                     <div class="feature-card">
-                        <div class="feature-icon">🌍</div>
-                        <h3>Deutsch &amp; Englisch</h3>
-                        <p>Komplette Oberfläche in DE und EN. Whisper transkribiert in über 50 Sprachen.</p>
+                        <div class="feature-icon">&#x1F30D;</div>
+                        <h3>German &amp; English</h3>
+                        <p>Full interface in DE and EN. Whisper transcribes in 50+ languages.</p>
                     </div>
                 </div>
             </div>
@@ -82,11 +86,11 @@
 
         <section class="backends">
             <div class="container">
-                <h2 class="section-title">Drei Backends — du wählst</h2>
+                <h2 class="section-title">Three Backends — Your Choice</h2>
                 <div class="backends-list">
-                    <div class="backend-item"><span>☁️ OpenAI Cloud</span></div>
-                    <div class="backend-item"><span>🖥️ Eigener Server (whisper.cpp)</span></div>
-                    <div class="backend-item"><span>🧠 Lokal (WhisperKit, offline)</span></div>
+                    <div class="backend-item"><span>&#x2601;&#xFE0F; OpenAI Cloud</span></div>
+                    <div class="backend-item"><span>&#x1F5A5;&#xFE0F; Custom Server (whisper.cpp)</span></div>
+                    <div class="backend-item"><span>&#x1F9E0; Local (WhisperKit, offline)</span></div>
                 </div>
             </div>
         </section>
@@ -96,13 +100,13 @@
                 <h2 class="section-title">Pro vs. Lite</h2>
                 <table>
                     <tr><th>Feature</th><th>Pro</th><th>Lite</th></tr>
-                    <tr><td>Sprache-zu-Text</td><td class="check">✓</td><td class="check">✓</td></tr>
-                    <tr><td>Alle Modi (Rage, Emoji, Yoda)</td><td class="check">✓</td><td class="check">✓</td></tr>
-                    <tr><td>Alle Backends</td><td class="check">✓</td><td class="check">✓</td></tr>
-                    <tr><td>Hotkeys</td><td class="check">✓</td><td class="check">✓</td></tr>
-                    <tr><td>Auto-Paste</td><td class="check">✓</td><td class="cross">—</td></tr>
-                    <tr><td>Einfügen</td><td>Automatisch</td><td>⌘V manuell</td></tr>
-                    <tr><td>Bezug</td><td>DMG (Direct Download)</td><td>Mac App Store</td></tr>
+                    <tr><td>Speech-to-Text</td><td class="check">&#x2713;</td><td class="check">&#x2713;</td></tr>
+                    <tr><td>All Modes (Rage, Emoji, Yoda, Translator)</td><td class="check">&#x2713;</td><td class="check">&#x2713;</td></tr>
+                    <tr><td>All Backends</td><td class="check">&#x2713;</td><td class="check">&#x2713;</td></tr>
+                    <tr><td>Hotkeys</td><td class="check">&#x2713;</td><td class="check">&#x2713;</td></tr>
+                    <tr><td>Auto-Paste</td><td class="check">&#x2713;</td><td class="cross">—</td></tr>
+                    <tr><td>Insertion</td><td>Automatic</td><td>&#x2318;V manual</td></tr>
+                    <tr><td>Distribution</td><td>DMG (Direct Download)</td><td>Mac App Store</td></tr>
                 </table>
             </div>
         </section>
@@ -112,11 +116,11 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-links">
-                    <a href="privacy.html">Datenschutz</a>
-                    <a href="impressum.html">Impressum</a>
-                    <a href="mailto:axxsys@gmail.com">Kontakt</a>
+                    <a href="privacy.html">Privacy</a>
+                    <a href="impressum.html">Legal Notice</a>
+                    <a href="mailto:axxsys@gmail.com">Contact</a>
                 </div>
-                <p class="copyright">&copy; 2026 Christian Ullmann. Alle Rechte vorbehalten.</p>
+                <p class="copyright">&copy; 2026 Christian Ullmann. All rights reserved.</p>
             </div>
         </div>
     </footer>

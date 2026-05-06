@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Datenschutzerkl&auml;rung — Blitztext</title>
+    <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="./" class="logo">
+                <img src="../blitztext-icon-1024.png" alt="Blitztext Icon" class="logo-app-icon" />
+                <span class="logo-icon">&#x26A1;</span>
+                Blitztext
+            </a>
+            <div class="nav-links">
+                <a href="./">Startseite</a>
+                <a href="impressum.html">Impressum</a>
+                <div class="lang-switch">
+                    <a href="../privacy.html">&#x1F1EC;&#x1F1E7;</a>
+                    <a href="privacy.html" class="active">&#x1F1E9;&#x1F1EA;</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="policy-page container">
+        <h1>Datenschutzerkl&auml;rung</h1>
+        <p class="last-updated">Stand: 29. April 2026 &middot; Version 1.0</p>
+
+        <blockquote>
+            <strong>Hinweis:</strong> Diese Datenschutzerkl&auml;rung wurde nach bestem Wissen und Gewissen erstellt, stellt jedoch keine Rechtsberatung dar.
+        </blockquote>
+
+        <h2>1. Verantwortlicher (Art. 4 Nr. 7 DSGVO)</h2>
+        <p>Christian Ullmann<br>E-Mail: <a href="mailto:axxsys@gmail.com">axxsys@gmail.com</a></p>
+
+        <h2>2. Gegenstand</h2>
+        <p>Blitztext Lite ist eine macOS-Men&uuml;leisten-App f&uuml;r Sprache-zu-Text-Diktation. Die App nimmt gesprochene Sprache per Mikrofon auf, transkribiert sie und stellt das Ergebnis in der macOS-Zwischenablage bereit.</p>
+
+        <h2>3. Was Blitztext NICHT tut</h2>
+        <ul>
+            <li><strong>Kein Tracking, keine Telemetrie, keine Nutzungsanalyse</strong></li>
+            <li><strong>Keine Werbung</strong></li>
+            <li><strong>Kein Account, keine Registrierung</strong></li>
+            <li><strong>Kein iCloud-Sync</strong></li>
+            <li><strong>Keine Weitergabe an Dritte</strong> — au&szlig;er an das vom Nutzer gew&auml;hlte Backend</li>
+            <li><strong>Keine Cookies, keine Ger&auml;te-/Nutzer-IDs</strong></li>
+        </ul>
+
+        <h2>4. Welche Daten werden verarbeitet?</h2>
+
+        <h3>4.1 Audioaufnahme</h3>
+        <table>
+            <tr><th>Eigenschaft</th><th>Details</th></tr>
+            <tr><td>Erhebung</td><td>Nur w&auml;hrend der Nutzer aktiv den Hotkey gedr&uuml;ckt h&auml;lt</td></tr>
+            <tr><td>Speicherort</td><td>Tempor&auml;re .m4a-Datei im macOS-Temp-Verzeichnis</td></tr>
+            <tr><td>Speicherdauer</td><td>Wird nach Transkription sofort gel&ouml;scht</td></tr>
+            <tr><td>Rechtsgrundlage</td><td>Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)</td></tr>
+        </table>
+
+        <h3>4.2 Transkribierter Text</h3>
+        <table>
+            <tr><th>Eigenschaft</th><th>Details</th></tr>
+            <tr><td>Verarbeitung</td><td>Wird in die macOS-Zwischenablage kopiert</td></tr>
+            <tr><td>Lokaler Verlauf</td><td>Letzte 5 Eintr&auml;ge, nur lokal, l&ouml;schbar</td></tr>
+            <tr><td>Dauerhafte Speicherung</td><td>Nein — bei App-Neustart geleert</td></tr>
+        </table>
+
+        <h3>4.3 API-Schl&uuml;ssel</h3>
+        <p>Verschl&uuml;sselt im macOS-Schl&uuml;sselbund. Werden nie geloggt, nie in Backups exportiert.</p>
+
+        <h3>4.4 Logdateien</h3>
+        <p>Lokal im Temp-Verzeichnis. Nur Metadaten (Zeitstempel, Textl&auml;ngen) — keine Transkriptionstexte in Release-Builds. Werden nie &uuml;bermittelt.</p>
+
+        <h2>5. Daten&uuml;bermittlung — je nach Backend</h2>
+
+        <h3>5.1 OpenAI Cloud (optional)</h3>
+        <p>Audio wird an die OpenAI Whisper API gesendet. Bei Modi wird Text zus&auml;tzlich an die Chat API gesendet.</p>
+        <p><strong>Empf&auml;nger:</strong> OpenAI, L.L.C. (USA)<br>
+        <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO<br>
+        <strong>Drittland&uuml;bermittlung:</strong> EU-Standardvertragsklauseln (SCCs)<br>
+        <a href="https://openai.com/privacy">OpenAI Datenschutz</a> &middot; <a href="https://openai.com/policies/data-processing-addendum/">DPA</a></p>
+        <p><strong>Hinweis (Apple Guideline 5.1.2(i)):</strong> Durch Wahl des OpenAI-Backends werden Daten an einen Drittanbieter-KI-Dienst &uuml;bermittelt. Widerruf jederzeit &uuml;ber die App-Einstellungen.</p>
+
+        <h3>5.2 Eigener Server (optional)</h3>
+        <p>Audio wird an die vom Nutzer konfigurierte URL gesendet. Der Nutzer ist f&uuml;r Datenschutz selbst verantwortlich.</p>
+
+        <h3>5.3 WhisperKit — lokal (offline)</h3>
+        <p><strong>Keine Daten&uuml;bermittlung.</strong> Verarbeitung ausschlie&szlig;lich auf dem Mac. Datenschutzfreundlichste Option.</p>
+
+        <h3>5.4 Ollama — lokaler KI-Rewrite</h3>
+        <p>L&auml;uft auf localhost. Kein Netzwerkverkehr nach au&szlig;en.</p>
+
+        <h2>6. Speicherdauer</h2>
+        <table>
+            <tr><th>Daten</th><th>Dauer</th><th>L&ouml;schung</th></tr>
+            <tr><td>Audio</td><td>Sekunden</td><td>Automatisch</td></tr>
+            <tr><td>Text</td><td>Sitzungsdauer</td><td>Bei App-Neustart</td></tr>
+            <tr><td>API-Schl&uuml;ssel</td><td>Bis manuelle L&ouml;schung</td><td>&Uuml;ber Einstellungen</td></tr>
+            <tr><td>Logs</td><td>Bis macOS-Neustart</td><td>Automatisch oder manuell</td></tr>
+        </table>
+
+        <h2>7. Ihre Rechte (DSGVO)</h2>
+        <ul>
+            <li><strong>Auskunft</strong> (Art. 15) &middot; <strong>Berichtigung</strong> (Art. 16) &middot; <strong>L&ouml;schung</strong> (Art. 17)</li>
+            <li><strong>Einschr&auml;nkung</strong> (Art. 18) &middot; <strong>Daten&uuml;bertragbarkeit</strong> (Art. 20)</li>
+            <li><strong>Widerspruch</strong> (Art. 21) &middot; <strong>Widerruf</strong> (Art. 7 Abs. 3)</li>
+            <li><strong>Beschwerde</strong> bei der <a href="https://www.bfdi.bund.de/DE/Service/Anschriften/Laender/Laender-node.html">Aufsichtsbeh&ouml;rde</a> (Art. 77)</li>
+        </ul>
+        <p>Da alle Daten lokal gespeichert werden, k&ouml;nnen Sie diese jederzeit selbst l&ouml;schen (Einstellungen, Keychain, Deinstallation).</p>
+
+        <h2>8. Datensicherheit (Art. 32 DSGVO)</h2>
+        <ul>
+            <li>API-Keys verschl&uuml;sselt im Keychain</li>
+            <li>Audio sofort nach Transkription gel&ouml;scht</li>
+            <li>Lokales Backend: keine Daten verlassen das Ger&auml;t</li>
+            <li>Externe APIs nur &uuml;ber HTTPS/TLS</li>
+        </ul>
+
+        <h2>9. Kontakt</h2>
+        <div class="contact-box">
+            <p>Christian Ullmann<br>E-Mail: <a href="mailto:axxsys@gmail.com">axxsys@gmail.com</a></p>
+            <p>Anliegen werden innerhalb eines Monats bearbeitet (Art. 12 Abs. 3 DSGVO).</p>
+        </div>
+
+        <p style="margin-top: 40px; font-size: 0.85rem; color: var(--text-secondary);">
+            Zuletzt aktualisiert: 29. April 2026. Diese Datenschutzerkl&auml;rung wurde nicht von einem Rechtsanwalt erstellt und kann individuelle Beratung nicht ersetzen.
+        </p>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="./">Startseite</a>
+                    <a href="impressum.html">Impressum</a>
+                    <a href="mailto:axxsys@gmail.com">Kontakt</a>
+                </div>
+                <p class="copyright">&copy; 2026 Christian Ullmann</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
