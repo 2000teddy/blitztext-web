@@ -147,9 +147,9 @@ nav .container {
 }
 
 .hero-app-icon {
-    width: 130px;
-    height: 130px;
-    border-radius: 28px;
+    width: 72px;
+    height: 72px;
+    border-radius: 16px;
     object-fit: cover;
     flex-shrink: 0;
     box-shadow: 0 8px 30px rgba(59, 130, 246, 0.3);
@@ -596,9 +596,9 @@ footer {
     }
 
     .hero-app-icon {
-        width: 100px;
-        height: 100px;
-        border-radius: 22px;
+        width: 60px;
+        height: 60px;
+        border-radius: 14px;
     }
 
     .hero h1 {
